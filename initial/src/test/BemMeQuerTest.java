@@ -9,12 +9,26 @@ public class BemMeQuerTest {
     @Test
     public void retornarBemMeQuerReceberNumero() {
 
+        retornarResultado(4, "Bem Me Quer");
+        retornarResultado(5, "Mal Me Quer");
+        retornarResultadoObject(12345, "Testar se é String");
+    }
+
+    private void retornarResultado (int numero, String mensagem) {
+
         BemMeQuer bemMeQuer = new BemMeQuer();
 
-        String resultado = bemMeQuer.isBemMeQuer(4);
-        assertThat(resultado, is("Bem Me Quer"));
+        String resultado = bemMeQuer.isQualMeQuer(numero);
 
-        String resultado1 = bemMeQuer.isBemMeQuer(12345);
-        assertThat(resultado1, is("Texto é String"));
+        assertThat(resultado, is(mensagem));
+    }
+
+    private void retornarResultadoObject(int numero, String mensagem) {
+
+        BemMeQuer bemMeQuer = new BemMeQuer();
+
+        String resultado = bemMeQuer.objectQualMeQuer(numero);
+
+        assertThat(resultado, is(mensagem));
     }
 }
