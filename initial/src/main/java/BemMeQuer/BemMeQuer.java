@@ -12,9 +12,9 @@ public class BemMeQuer {
 
     public String objectQualMeQuer(Object numero) {
         if (numero instanceof Integer) {
-            return "Testar se é String";
+            return "Testar se é String"; //agora tenta escrever um teste que garante que esta parte funciona
         } else {
-            return "Mensagem de erro";
+            return "Mensagem de erro"; //aquele teste está garantindo que esta parte do código funciona
         }
     }
 }
