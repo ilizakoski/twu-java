@@ -72,12 +72,20 @@ public class CalculatorKataTest {
     }
 
     @Test
-    public void givenOnePlusTwoAsStringReturnThreeAndFiveAsInt() {
+    public void givenOnePlusTwoAsStringReturnThreeAndFiveAsSingleChar() {
 
         int result = calculatorKata.sumStrings("//#\n1#2");
         int result1 = calculatorKata.sumStrings("//;\n2;3");
 
         assertThat(result, is(3));
         assertThat(result1, is(5));
+    }
+
+    @Test
+    public void givenOnePlusTwoAsStringReturnThreeAsMultiChar() {
+
+        int result = calculatorKata.sumStrings("//xyz\n1xyz2");
+
+        assertThat(result, is(3));
     }
 }
