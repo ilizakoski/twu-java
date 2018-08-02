@@ -62,4 +62,22 @@ public class CalculatorKataTest {
 //        assertThat(result, is("-1, -3"));
         assertThat(result, is(-2));
     }
+
+    @Test
+    public void givenOnePlusTwoPlusThreePlusFourPlusFivePlusThousandAsStringReturnIgnoredAsInt() {
+
+        int result = calculatorKata.sumStrings("1,2\n3, 4, 5, 1000");
+
+        assertThat(result, is(1010));
+    }
+
+    @Test
+    public void givenOnePlusTwoAsStringReturnThreeAndFiveAsInt() {
+
+        int result = calculatorKata.sumStrings("//#\n1#2");
+        int result1 = calculatorKata.sumStrings("//;\n2;3");
+
+        assertThat(result, is(3));
+        assertThat(result1, is(5));
+    }
 }

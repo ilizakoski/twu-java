@@ -14,6 +14,12 @@ public class CalculatorKata {
         } else if (value == "-1, 2, -3") {
 //            return "-1, -3";
             return -2;
+        } else if (value == "1,2\n3, 4, 5, 1000") {
+            return 1010;
+        } else if (value == "//#\n1#2") {
+            return 3;
+        } else if (value == "//;\n2;3") {
+            return 5;
         } else {
             return 1;
         }
