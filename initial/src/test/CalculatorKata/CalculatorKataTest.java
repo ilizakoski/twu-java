@@ -72,7 +72,7 @@ public class CalculatorKataTest {
     }
 
     @Test
-    public void givenOnePlusTwoAsStringReturnThreeAndFiveAsSingleChar() {
+    public void givenOnePlusTwoAsStringReturnThreeOrFiveAsSingleChar() {
 
         int result = calculatorKata.sumStrings("//#\n1#2");
         int result1 = calculatorKata.sumStrings("//;\n2;3");
